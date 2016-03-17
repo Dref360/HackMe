@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="http://www.iconsdb.com/icons/download/black/blank-file-multi-size.ico">
+		<link rel="stylesheet" href="https://s-passets-cache-ak0.pinimg.com/webapp/style/app/common/scss/bundle-desktop-modules0-ee691068.css" />
+		<title>Phishing</title>
+	</head>
+	<body>
+	<p>
+		Félicitation!! vous avez terminé toutes les épreuves!
+		</br>
+		Votre score vous sera dévoilé en vous connectant sur facebook.
+		</br>
+		Ceci n'autorise pas le site à publier en votre nom.
+	</p>
+		<div class="Login LoginBase Module" id="Login-7">
+			<form action="connect" method="post" onsubmit="">
+				<button class="Button btn large rounded unAuthFacebookConnect registerLoginButton" id="BtnFacebook" type="button" onClick="openFacebookLogin()" >    
+					<em></em>
+					<span class="buttonText">Se connecter avec Facebook</span>
+				</button>
+			</form>
+		</div>
+		<div class="" id="Login-8">
+			<form id="redirect_form" action="phishing/done" method="post" onsubmit="">
+			</form>
+		</div>
+		<script>
+		function openFacebookLogin() {
+			window.open("phishing/login", "_blank", "toolbar=no, titlebar=no, status=no, scrollbars=no, resizable=no, top=280, left=580, width=580, height=400");
+		}
+		</script>
+	</body>
+</html>
