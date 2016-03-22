@@ -1,6 +1,7 @@
 function getFormsInfo() {
    //document.getElementById("demo").innerHTML = "Paragraph changed.";
-   alert(document.getElementById('email').value + "   " + document.getElementById('pass').value);
+   //alert(document.getElementById('email').value + "   " + document.getElementById('pass').value);
+   alert("test");
 }
 
 
