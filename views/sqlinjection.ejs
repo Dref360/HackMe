@@ -17,15 +17,18 @@
         <label class="mdp">Mot de passe :</label>
         <input type="text" class="mdp" name="mdp" id="mdp" tabindex="2" value="" autofocus="0" />
       </div>
-      <input type="submit" value="Connexion">
+      <div>
+        <input type="submit" tabindex="3" value="Connexion">
+        <label class="erreurConnexion"><%= connectionMessage %></label>
+      </div>
     </form>
-    <form action="<%= nextPart %>" method="<%= nextPartMethod %>">
+    <form action="<%= nextPart %>" method="post">
       <div>
         <label class="reponse">Réponse :</label>
-        <input type="text" class="reponse" name="reponse" id="reponse" tabindex="3" value="" autofocus="0" />
-        <label class="erreur"><%= error %></label>
+        <input type="text" class="reponse" name="reponse" id="reponse" tabindex="4" value="" autofocus="0" />
+        <label class="erreurReponse"><%= answerError %></label>
       </div>
-      <input type="submit" value="Envoyer la réponse">
+      <input type="submit" tabindex="5" value="Envoyer la réponse">
     </form>
   </body>
 </html>
