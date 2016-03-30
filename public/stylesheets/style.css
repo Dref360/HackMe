@@ -12,6 +12,19 @@ form {
   margin-top: 10px;
 }
 
+header {
+  margin-bottom: 30px;
+}
+
+container-fluid {
+  height: auto;
+  background: #131313;
+  color:#FF0000;
+}
+
+
+
+/*tool tips*/
 a.tooltips {
   position: relative;
   display: inline;

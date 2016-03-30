@@ -2,15 +2,24 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
 	<link rel="icon" type="image/x-icon" href="http://www.iconsdb.com/icons/download/black/blank-file-multi-size.ico">
+  <% include partials/head %>
   </head>
   <body>
+    <header>
+        <% include partials/header %>
+    </header>
+    <br>
+    <div>
     <h1><%= title %></h1>
     <p>Bienvenue sur <%= title %></p>
     <ul>
       <li><a href="phishing">Phising </li>
-      <li><a href="steganography">Stéganographie </li>
+      <li><a href="steganography">Stéganographie</a> </li>
     </ul>
+  </div>
+    <footer>
+        <% include partials/footer %>
+    </footer>
   </body>
 </html>
