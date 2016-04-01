@@ -2,9 +2,13 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <% include partials/head %>
   </head>
   <body>
+    <header>
+        <% include partials/header %>
+    </header>
+    <br>
     <h1><%= title %></h1>
     <p>Voici l'épreuve de <%= title %></p>
     <pre>

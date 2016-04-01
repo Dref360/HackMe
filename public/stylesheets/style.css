@@ -22,14 +22,14 @@ form {
   margin-top: 10px;
 }
 
-div.left {
-	float: left;
-	width: 50%;
+header {
+  margin-bottom: 30px;
 }
 
-div.right {
-	width: 50%;
-	float: right;
+container-fluid {
+  height: auto;
+  background: #131313;
+  color:#FF0000;
 }
 
 div.whiteSpace {
