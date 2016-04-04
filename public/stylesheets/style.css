@@ -4,8 +4,18 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
+pre{
+    white-space: pre-wrap;
+}
+
 a {
   color: #00B7FF;
+}
+
+li {
+  list-style-type: none;
+  margin: 10px 0px;
 }
 
 form {
@@ -22,9 +32,17 @@ container-fluid {
   color:#FF0000;
 }
 
+div.whiteSpace {
+  background-color: white;
+  width: 50%;
+  border: 10px;
+  border-color: grey;
+  border-style: solid;
+  padding: 10px;
+}
 
 
-/*tool tips*/
+
 a.tooltips {
   position: relative;
   display: inline;
@@ -53,7 +71,7 @@ a.tooltips span:after {
 }
 a:hover.tooltips span {
   visibility: visible;
-  opacity: 0.8;
+  opacity: 0.9;
   bottom: 30px;
   left: 50%;
   margin-left: -76px;

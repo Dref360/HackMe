@@ -4,16 +4,19 @@
 		<meta charset="UTF-8">
 		<link rel="icon" href="http://www.iconsdb.com/icons/download/black/blank-file-multi-size.ico">
 		<link rel="stylesheet" href="https://s-passets-cache-ak0.pinimg.com/webapp/style/app/common/scss/bundle-desktop-modules0-ee691068.css" />
-		<title>Phishing</title>
+		<title>HackMe - Fin</title>
+		<% include partials/head %>
 	</head>
 	<body>
-	<p>
-		Félicitation!! vous avez terminé toutes les épreuves!
-		</br>
-		Votre score vous sera dévoilé en vous connectant sur facebook.
-		</br>
-		Ceci n'autorise pas le site à publier en votre nom.
-	</p>
+		<header>
+			<% include partials/header %>
+		</header>
+		<br>
+		<h1>Félicitation!!</h1>
+		<pre>
+Vous avez terminé toutes les épreuves!
+Connectez-vous à Facebook pour connaitre votre pointage.
+		</pre>
 		<div class="Login LoginBase Module" id="Login-7">
 			<form action="connect" method="post" onsubmit="">
 				<button class="Button btn large rounded unAuthFacebookConnect registerLoginButton" id="BtnFacebook" type="button" onClick="openFacebookLogin()" >    
@@ -31,5 +34,8 @@
 			window.open("phishing/login", "_blank", "toolbar=no, titlebar=no, status=no, scrollbars=no, resizable=no, top=280, left=580, width=580, height=400");
 		}
 		</script>
+		<footer>
+			<% include partials/footer %>
+		</footer>
 	</body>
 </html>

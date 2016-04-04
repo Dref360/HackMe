@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<script type="text/javascript">
+			function testAnswer()
+			{
+				var answer = document.getElementById('answer').value;
+				var p = document.getElementById('answerResponse');
+				if (/89%?/i.test(answer)) {
+					p.textContent = 'Bravo!';
+				}
+				else {
+					p.textContent = "Ce n'est pas la bonne réponse!";
+				}
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<p>Voici l'épreuve de <%= title %></p>
+		<pre>
+Plusieurs sites webs ne gèrent pas l'accès de leurs répertoire.<br>Il est donc possible d'exploiter des scripts pour accèder à des fichiers qui ne devraient pas l'être.
+
+Ci-bas on retrouve une interface qui permet l'affichage des relevés de notes.<br>Votre objectif est de trouver la note de <i>Felix Lapierre</i> dans le cours IFT-585 du <i>trimestre d'été 2015</i>.
+		</pre>
+		<div class="whiteSpace">
+			<span style="color: black;">Bienvenue <i>George Durant</i>.<br>Vous pouvez choisir le document que vous désirez afficher.</span>
+			<form action="pathTraversal/displayFile" method="get">
+				<input type="radio" name="file" value="Notes/GeorgeDurant/Automne2014.txt"> Trimestre Automne 2014<br>
+				<input type="radio" name="file" value="Notes/GeorgeDurant/Hiver2015.txt"> Trimestre Hiver 2015<br><br>
+				<input type="submit" value="Afficher le fichier">
+			</form>
+		</div>
+		
+		<form onSubmit="return testAnswer();">
+			<div style="padding: 10px;">
+				<label class="answer">Solution:</label>
+				<input type="text" class="answer" name="answer" id="answer" tabindex="1" value="" autofocus="1" />
+			</div>
+		  <input type="submit" value="Vérifier la réponse"/>
+		  <span id="answerResponse"></span>
+		</form>
+		
+		<div>
+			<ul style="padding: 0px;">
+				<li><a class="tooltips" href="#">Indice no.1
+					<span>On peut voir dans l'URL le répertoire dans lequel se trouve le fichier.</span>
+				</a></li>
+				<li><a class="tooltips" href="#">Indice no.2
+					<span>On peut modifier l'URL pour spécifier le fichier qu'on aimerait afficher.</span>
+				</a></li>
+				<li><a class="tooltips" href="#">Indice no.3
+					<span>'%2F' représente le caractère ASCII '/'.</span>
+				</a></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"/>
+</html>
