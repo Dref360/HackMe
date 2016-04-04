@@ -2,14 +2,20 @@
 <html>
   <head>
     <title>HackMe - SQL Injection</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="icon" type="image/x-icon" href="http://www.iconsdb.com/icons/download/black/blank-file-multi-size.ico">
+    <% include partials/head %>
   </head>
   <body>
+    <header>
+        <% include partials/header %>
+    </header>
+    <br>
     <h1>SQL Injection</h1>
     <p>Les attaques de type SQL Injection ...</p>
     <form action="sqlinjection/part1" method="post">
       <input type="submit" value="Commencer l'épreuve">
     </form>
+    <footer>
+        <% include partials/footer %>
+    </footer>
   </body>
 </html>

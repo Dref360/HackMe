@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>HackMe - SQL Injection</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="icon" type="image/x-icon" href="http://www.iconsdb.com/icons/download/black/blank-file-multi-size.ico">
+    <% include partials/head %>
   </head>
   <body>
+    <header>
+        <% include partials/header %>
+    </header>
+    <br>
     <h1><%= title %></h1>
     <p><%= instruction %></p>
     <form action="<%= part %>" method="post">
@@ -30,5 +33,8 @@
       </div>
       <input type="submit" tabindex="5" value="Envoyer la réponse">
     </form>
+    <footer>
+        <% include partials/footer %>
+    </footer>
   </body>
 </html>
