@@ -21,7 +21,8 @@ router.post('/answer2', function(req,res,next){
   {
     //goodAnswer
     console.log('Passed!');
-    res.render('index', { title: 'HackMe' });
+    res.redirect('/');
+    //res.render('index', { title: 'HackMe' });
   }
   else {
     //Bad answer
