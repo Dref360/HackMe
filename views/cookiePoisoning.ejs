@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<% include partials/head %>
+	<head/>
+	<body>
+		<header>
+			<% include partials/header %>
+		</header>
+		<br>
+		<h1><%= title %></h1>
+		<p>Voici l'épreuve de <%= title %></p>
+		<pre>
+			Les sites webs utilisent souvent des cookies pour stockés des informations sur les usagers.
+			Il est très facile pour un usager de consulter ces cookies, par contre l'information stocké à l'intérieur est souvent encrypté ou dans un format difficile voir impossible à comprendre.
+			Il y a tout de même des sites qui stock de l'information facilement modifiable dans les cookies.<br>
+			Cette page contient de l'information confidentiel accessible seulement aux usagers de type Admin.
+			Votre objectif est de modifier le cookie pour avoir accès à cette information.
+		</pre>
+		<% if (status=="Admin") { %>
+			<p style="color:green"> Bravo! Vous avez réussi! </p>
+		<% } %>
+		<br><br><br>
+		<div align='center'>
+			<a class="tooltips" href="#">Indice 1
+				<span>On peut modifier les cookies en utilisant des plugins ou en utilisant de l'injection javascript.</span>
+			</a>
+			<br><br><br>
+			<a class="tooltips" href="#">Indice 2
+				<span>En entrant "javascript:alert(document.cookie);" dans la barre d'adresse, on peut voir les cookies sur la page.</span>
+			</a>
+			<br><br><br>
+			<a class="tooltips" href="#">Indice 3
+				<span>Essayer de modifier le cookie compréhensible.</span>
+			</a>
+		</div>
+	<body/>
+</html>
