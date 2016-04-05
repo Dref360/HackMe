@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<% include partials/head %>
+	<head/>
+	<body>
+		<header>
+			<% include partials/header %>
+		</header>
+		<br>
+		<h1><%= title %></h1>
+		<p>Voici l'épreuve de <%= title %></p>
+		<pre>
+			Plusieurs site webs (ou applications) ne possèdent pas de protection contre une multitude de tentatives de connexion.
+			Par exemple, un site web créé avec WordPress ne contient aucune protection contre les attaques de Brute Force par défaut.
+			Pour réussir cette épreuve, vous devez trouver le mot de passe de la page.
+		</pre>
+		<form action="bruteForce" method="post">
+			<div>
+				<label class="passe">Mot de passe :</label>
+				<input type="text" name="passe" id="passe" />
+			</div>
+			<input type="submit" value="Connection">
+		</form>
+		<% if (error) { %>
+			<p style="color:red"> Mauvais mot de passe. </p>
+		<% } %>
+		<% if (success) { %>
+			<p style="color:green"> BR-BR-BR-BR-BRAVO! Vous avez trouvé le mot de passe. </p>
+		<% } %>
+		<br><br><br>
+		<div align='center'>
+			<a class="tooltips" href="#">Indice 1
+				<span>Des outils comme THC-Hydra sur Linux permette d'effectuer des attaques Brute Force contre un site web.</span>
+			</a>
+			<br><br><br>
+			<a class="tooltips" href="http://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-online-web-form-passwords-with-thc-hydra-burp-suite-0160643/">Indice 2
+				<span><li>Clickez sur l'indice pour voir un tutoriel qui explique la technique en détail.</li></span>
+			</a>
+		</div>
+	<body/>
+</html>
