@@ -12,6 +12,7 @@ var sqlinjection = require('./routes/sqlinjection');
 var steganography = require('./routes/steganography');
 var pathTraversal = require('./routes/pathTraversal');
 var cookiePoisoning = require('./routes/cookiePoisoning');
+var bruteForce = require('./routes/bruteForce');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/sqlinjection', sqlinjection);
 app.use('/steganography',steganography);
 app.use('/pathTraversal', pathTraversal);
 app.use('/cookiePoisoning', cookiePoisoning);
+app.use('/bruteForce', bruteForce);
 //app.use('/answer',steganography);
 
 // catch 404 and forward to error handler
