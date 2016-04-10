@@ -13,6 +13,7 @@ var steganography = require('./routes/steganography');
 var pathTraversal = require('./routes/pathTraversal');
 var cookiePoisoning = require('./routes/cookiePoisoning');
 var bruteForce = require('./routes/bruteForce');
+var xss = require('./routes/xss');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/steganography',steganography);
 app.use('/pathTraversal', pathTraversal);
 app.use('/cookiePoisoning', cookiePoisoning);
 app.use('/bruteForce', bruteForce);
+app.use('/xss', xss);
 //app.use('/answer',steganography);
 
 // catch 404 and forward to error handler
