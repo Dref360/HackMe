@@ -35,7 +35,6 @@ function connect (usager, mdp, infos, res) {
       message = "Bienvenue " + rows[0].username + "!";
     
     infos.connectionMessage = message;
-    infos.answer = "";
     res.render("sqlinjection", infos);
   });
 }
@@ -50,6 +49,8 @@ router.get("/", function (req, res) {
 })
 
 router.post("/", function (req, res) {
+  infos.answerError = "";
+    
   if (req.body.usager !== undefined) {
     connect(req.body.usager, req.body.mdp, infos, res);
   }
