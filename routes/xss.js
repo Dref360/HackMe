@@ -4,23 +4,23 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log("test");
-  res.render('xss', { title: 'HackMe', answer:"", error:false });
+  res.render('xss', { title: 'HackMe', answer:"", won: false });
 });
-//xssChallenge : {prefix : String, answer : String, suffix : String} -> Res -> String -> Void
+
+
 function xssChallenge(htmlChallenge, res, page) {
-    htmlChallenge = htmlChallenge | {}
     var html = htmlChallenge.prefix + htmlChallenge.answer + htmlChallenge.suffix;
     console.log("received html: " + html);
     jsdom.env(html,
     function(error, window) {
+        var won;
         if (!error && window && window.document && window.document.getElementsByTagName("script").length > 0) {
-            res.send('Félicitations!');
-            res.redirect('/');
+            won = true;
         }
         else{
-            res.render(page, { title: 'HackMe', answer: htmlChallenge.answer ,error:false });
+            won = false;
         }
+        res.set("X-XSS-Protection", "0").render(page, { title: 'HackMe', answer: htmlChallenge.answer, won:won });
     });
 }
 
