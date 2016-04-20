@@ -17,13 +17,7 @@ router.get('/2', function(req, res, next) {
 });
 
 router.post('/2', function(req, res, next){
-    function htmlEscape(s) {
-        return s.replace(/./g, function(x) {
-           return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;' }[x] || x;       
-        });
-    }
-
-    var ans = "Bonjour <a href='#'>" + htmlEscape(req.body.answer) +"</a>";
+    var ans = "Bonjour <a href='#'>" + req.body.answer.toLowerCase().replace(/script/g,"") +"</a>";
     xssChallenge({prefix: "<html><body><div id='answer'>", answer: ans, suffix: "</div></body></html>"}, res, "xss2");
 });
 
